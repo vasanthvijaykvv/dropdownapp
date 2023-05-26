@@ -27,7 +27,7 @@ function InputDroupDown() {
                    <option value="true">true</option>
               </select>
                 </form>
-        {arr.map((t,i)=>{
+            {arr.map((t,i)=>{
             return (
                 <form key={i+1}>
                 {secondInput}
@@ -36,11 +36,9 @@ function InputDroupDown() {
                    <option value="true">true</option>
               </select>
                 </form>
-            )
-        })}<button type='button' onClick={AddInput}>+Add arg</button>
-            
+                   )
+              })}<button type='button' onClick={AddInput}>+Add arg</button>            
     </div>
   )
 }
-
 export default InputDroupDown

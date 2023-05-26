@@ -6,19 +6,15 @@ import Constant from '../DropDownfiles/Constant/Constant'
 
 
 function AndOperator() {
-    let {form,setForm,input,toggle,firstInput,True,secondInput,gettingval,setGettingval
-    ,otherVal,setOtherval,data,Constantval, setConst} = DataProvider()
+    let {setForm,input,toggle,firstInput,True,gettingval,setGettingval
+    ,otherVal,setOtherval,data} = DataProvider()
    let [andor,setAndOr] = useState("and")
    let [isArgumentone,setIsArgumentone] =useState("")
    let [isArgumenttow,setIsArgumentTwo] =useState("")
    let [valueone,setValueOne] = useState("My Arg")
    let [valueTwo,setValueTwo] = useState("My Arg")
    
-   
-   const handleChange = (event) => {
-    setForm(event.target.value)
-  }
- useEffect(()=>{
+    useEffect(()=>{
      if(valueone===firstInput){
         console.log("entred")
         setGettingval(toggle)
@@ -32,10 +28,10 @@ function AndOperator() {
      if(valueTwo!==data){
         setOtherval(toggle)
      }
- },[valueone,valueTwo,toggle,True])
- console.log(valueTwo,data,gettingval,otherVal)
-  return (
-    <div>
+    },[valueone,valueTwo,toggle,True])
+       console.log(valueTwo,data,gettingval,otherVal)
+    return (
+       <div>
            <select value={andor} onChange={(e)=>setAndOr(e.target.value)}>      
                    <option value="and">and</option>
                    <option value="or">or</option>                   
@@ -90,11 +86,9 @@ function AndOperator() {
                 {((gettingval === "false") && (otherVal === "false")) ? <h3>Result : false</h3>                    
               :<h3>Result : true</h3>}                    
               </div>
-              )}
-
-              
-    </div>
-  )
-}
+              )}              
+        </div>
+          )
+          }
 
 export default AndOperator

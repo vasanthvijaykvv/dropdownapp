@@ -20,5 +20,4 @@ function Constant() {
     </div>
   )
 }
-
 export default Constant

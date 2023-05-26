@@ -5,7 +5,7 @@ import AndOperator from '../AndOperator'
 import Argument from '../../DropDownfiles/Argument/Argument'
 import Constant from '../../DropDownfiles/Constant/Constant'
 function Addoptone() {
-    let {newFormone,setNewFormone,addoptionone,setAddOptionone} = DataProvider()
+    let {newFormone,setNewFormone,setAddOptionone} = DataProvider()
     
     const CaptureEventone = (event) => {
         setNewFormone(event.target.value)

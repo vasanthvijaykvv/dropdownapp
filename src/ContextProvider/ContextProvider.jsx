@@ -1,7 +1,6 @@
 import React, { createContext, useContext ,useState} from 'react'
 import FormFile from '../DropDownfiles/FormFile/FormFile'
 import InputDroupDown from '../DropDownfiles/InputDropDown/InputDroupDown';
-import Addopt from '../Andoperator/Addoption/Addopt';
 
 const createContextProvider = createContext(null)
 export function ContextProvider() {
@@ -16,13 +15,13 @@ export function ContextProvider() {
     let [ addoption,setAddOption] = useState(false)
     let [ addoptionone,setAddOptionone] = useState(false)
     const [Constantval, setConst] = useState("false")
-  let [arr,setArr] = useState([])
-  let [istrue, setIsTrue] = useState(false)
-  let [gettingval,setGettingval] = useState("")
-   let [otherVal,setOtherval] = useState("")
-   const secondInput = <input type='text' value={data} onInput={(e)=>{setData(e.target.value)}} ></input>
+    let [arr,setArr] = useState([])
+    let [istrue, setIsTrue] = useState(false)
+    let [gettingval,setGettingval] = useState("")
+    let [otherVal,setOtherval] = useState("")
+    const secondInput = <input type='text' value={data} onInput={(e)=>{setData(e.target.value)}} ></input>
     const FirstInput = <input type='text'value={firstInput}></input>
-   return (
+    return (
     <div>
         <createContextProvider.Provider value={{form,setForm,input,setInput,True,setTrue,toggle,setToggle
         ,data, setData,arr,setArr,istrue, setIsTrue,secondInput,firstInput,FirstInput,gettingval,setGettingval
@@ -30,23 +29,22 @@ export function ContextProvider() {
         ,Constantval, setConst
         }} >
         <InputDroupDown/>
-        <FormFile/>
-        
+        <FormFile/>        
         </createContextProvider.Provider>
-    </div>
-  )
-}
+      </div>
+     )
+   }
 
 export let DataProvider = () =>{
     const {form,setForm,input,setInput,True,setTrue,toggle,setToggle
         ,data, setData,arr,setArr,istrue, setIsTrue,secondInput,firstInput,FirstInput
         ,gettingval,setGettingval
         ,otherVal,setOtherval,newForm,setNewForm,addoption,setAddOption
-    ,newFormone,setNewFormone,addoptionone,setAddOptionone,Constantval, setConst} = useContext(createContextProvider)
-    return{form,setForm,input,setInput,True,setTrue,toggle,setToggle
+       ,newFormone,setNewFormone,addoptionone,setAddOptionone,Constantval, setConst} = useContext(createContextProvider)
+       return{form,setForm,input,setInput,True,setTrue,toggle,setToggle
         ,data, setData,arr,setArr,istrue, setIsTrue,secondInput,firstInput,FirstInput
         ,gettingval,setGettingval
         ,otherVal,setOtherval,newForm,setNewForm,addoption,setAddOption,newFormone,setNewFormone,addoptionone,setAddOptionone
         ,Constantval, setConst}
-}
+    }
 
