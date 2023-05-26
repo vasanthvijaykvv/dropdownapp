@@ -1,0 +1,10 @@
+.container{
+    border: 3px solid yellowgreen;
+    width: 50%;
+    min-height: 50vh;
+    margin: 30px auto;
+    background-color: antiquewhite;
+    box-sizing: border-box;
+    border-radius: 5px;
+
+}
